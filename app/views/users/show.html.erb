@@ -1,0 +1,13 @@
+<h2><%= @user.username.capitalize %>'s Profile</h2>
+
+<h3>Reports:</h3>
+
+<ul>
+<% @reports.each do |report| %>
+  <li>
+    <p><%= link_to "#{report.car.state} - #{report.car.plate}", car_path(report.car.id) %></p>
+    <p><%= link_to report.title, report_path(report.id)  %></p>
+    <p><%= report.text %></p>
+  </li>
+<% end %>
+</ul>

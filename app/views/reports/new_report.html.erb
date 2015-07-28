@@ -1,0 +1,17 @@
+<h4>Enter your new report</h4>
+
+<%= form_tag(reports_path) do  %>
+    <p><%= label_tag(:state, "State:") %></p>
+    <p><%= select :car, :state, ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"]%></p>
+
+    <p><%= label_tag(:plate, "Plate:") %></p>
+    <p><%= text_field_tag  :plate %></p>
+
+    <p><%= label_tag(:title, "Title:") %></p>
+    <p><%= text_field_tag  :title %></p>
+
+    <p><%= label_tag(:report, "Report:") %></p>
+    <p><%= text_area_tag(:text, "", size: "20x30") %></p>
+
+    <p><%= submit_tag "File Report" %></p>
+<%end%>

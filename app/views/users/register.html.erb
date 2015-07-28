@@ -1,0 +1,9 @@
+<%= form_for @user, :url => { :action => "create" }  do |f|  %>
+    <%= label_tag(:username, "Username:") %>
+    <%= f.text_field  :username %>
+
+    <%= label_tag(:password, "Password:") %>
+    <%= f.password_field  :password %>
+    <!-- from model redirect, then runs method pwd from bcrypt with pwd of nil -->
+    <%= f.submit "Register" %>
+<%end%>

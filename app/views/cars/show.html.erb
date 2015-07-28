@@ -1,0 +1,12 @@
+<h2><%= @car.state %> - <%= @car.plate %>'s Profile</h2>
+
+<h3>Reports:</h3>
+
+<ul>
+<% @reports.each do |report| %>
+  <li>
+    <p><%= report.title %></p>
+    <p><%= report.text %></p>
+  </li>
+<% end %>
+</ul>
